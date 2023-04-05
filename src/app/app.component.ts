@@ -10,6 +10,13 @@ export class AppComponent implements OnInit {
 
   public buttonName: string | undefined;
 
+  public arr = [
+    { username: 'gosho', address: { city: 'sofia' } },
+    { username: 'pesho', address: { city: 'plovdiv' } },
+  ];
+
+  public arr2: any = [];
+
   // public arrIcons: string[] = ["a"];
 
   ngOnInit() {
@@ -17,7 +24,13 @@ export class AppComponent implements OnInit {
   }
 
   public onButtonClick(event: string): void {
-    console.log('event', event);
+    this.arr2 = [
+      ...this.arr,
+      { username: 'losho', address: { city: 'burgas' } },
+    ];
+
+    this.arr[0].username = 'tzvetan';
+    this.title = 'new Title';
     this.buttonName = event;
   }
 }
