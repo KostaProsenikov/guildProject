@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ItemComponent } from './shared/item-component/item.component';
+import { NavigationModule } from './navigation/navigation.module';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, ItemComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, HomeComponent, AboutComponent],
+  imports: [BrowserModule, AppRoutingModule, NavigationModule],
   providers: [],
   bootstrap: [AppComponent],
 })
