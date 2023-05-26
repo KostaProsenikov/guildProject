@@ -1,0 +1,10 @@
+<ng-template #details>
+    <ul>
+        <li *ngFor="let todo of todos" [routerLink]="['detail', todo.id]" [queryParams]="{title: todo.title}">{{todo.title}} -> {{todo.id}}</li>
+    </ul>
+</ng-template> 
+
+<ng-template #isLoading>
+    <h1>Loding ... </h1>
+</ng-template>
+<ng-container *ngIf="todos.length then details; else isLoading"></ng-container>

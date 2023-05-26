@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppRouts } from 'src/app/app-routing.module';
 
 @Component({
   selector: 'app-navigation',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-
+  appRouting  = AppRouts
 }

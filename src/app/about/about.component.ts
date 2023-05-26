@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AboutComponent {
   constructor(private router: Router){
-  setTimeout(() => {
-    this.router.navigate(['home', 1])
-  }, 1000);
+  // setTimeout(() => {
+  //   this.router.navigate(['home', 1])
+  // }, 1000);
   }
 }
